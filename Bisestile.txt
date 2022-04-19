@@ -12,10 +12,15 @@ Otuput: "L'anno e` bisestile";
 */
 
 let n = Number(prompt("inserisci anno: "));
-
+/*
 if(n%400==0 || (n%4==0) && (n%100!=0)){
     console.log("L'anno e` bisestile");
 }
 else{
     console.log("L'anno non e` bisestile"); 
+}
+*/
+switch(n%400==0 || (n%4==0) && (n%100!=0)){
+    case true:console.log("L'anno e` bisestile");break;
+    case false:console.log("L'anno non e` bisestile");break;
 }

@@ -34,69 +34,76 @@
 //Output : Arrivederci
 
 
+function calcoloBmi(bmi:number):void{
+
+    if(bmi<16.5){
+        console.log("Sottopeso severo");
+    }
+    else if(bmi >= 16.5 && bmi <18.4){
+        console.log("Sottopeso");
+    }
+    else if(bmi >= 18.5 && bmi <24.9){
+        console.log("Normale");
+    }
+    else if(bmi >= 25 && bmi <30){
+        console.log("Sovrappeso");
+    }
+    else if(bmi >= 30.1 && bmi <34.9){
+        console.log("Obestiá di primo grado");
+    }
+    else if(bmi >= 35 && bmi <40){
+        console.log("Obestiá di secondo grado");
+    }
+    else if(bmi >= 40){
+        console.log("Gskianto");
+    }
+
+}
+
+function calcoloPolso():void{
+    let conferma = String(prompt("Vuoi effettuare una misurazione precisa?"));
+
+    if(conferma.toLowerCase() == "si"){
+        let sesso = String(prompt("Inserisci sesso"));
+        let polso = Number(prompt("Inserisci circonferenza polso in cm"));
+
+        if(sesso.toLowerCase()=="donna"){
+            if(polso<15){
+                console.log("La tua costituzione é: esile");
+            }
+            else if(polso>=15 && polso<16){ 
+                console.log("La tua costituzione é: Normale");
+            }
+            else if(polso>=16){ 
+                console.log("La tua costituzione é: Robusta");
+            }
+
+        }
+        else if(sesso.toLowerCase()== "uomo"){
+            if(polso<17){
+                console.log("La tua costituzione é: esile");
+            }
+            else if(polso>=17 && polso<18){ 
+                console.log("La tua costituzione é: Normale");
+            }
+            else if(polso>=18){ 
+                console.log("La tua costituzione é: Robusta");
+            }
+        }
+
+    }
+    else if(conferma.toLocaleLowerCase() == "no"){
+        console.log("Arrivederci");
+    }
+}
+
 let peso = Number(prompt("Inserisci peso in libbre"));
 let altezza = Number(prompt("Inserisci altezza in piedi"));
 
 altezza = altezza / 3.2808;
 peso = peso /  2.2046;
 
-let bmi:Number = peso/(altezza * altezza);
+let bmi:number = peso/(altezza * altezza);
 
-
-if(bmi<16.5){
-    console.log("Sottopeso severo");
-}
-else if(bmi >= 16.5 && bmi <18.4){
-    console.log("Sottopeso");
-}
-else if(bmi >= 18.5 && bmi <24.9){
-    console.log("Normale");
-}
-else if(bmi >= 25 && bmi <30){
-    console.log("Sovrappeso");
-}
-else if(bmi >= 30.1 && bmi <34.9){
-    console.log("Obestiá di primo grado");
-}
-else if(bmi >= 35 && bmi <40){
-    console.log("Obestiá di secondo grado");
-}
-else if(bmi >= 40){
-    console.log("Gskianto");
-}
-
-let conferma = String(prompt("Vuoi effettuare una misurazione precisa?"));
-
-if(conferma.toLowerCase() == "si"){
-    let sesso = String(prompt("Inserisci sesso"));
-    let polso = Number(prompt("Inserisci circonferenza polso in cm"));
-
-    if(sesso.toLowerCase()=="donna"){
-        if(polso<15){
-            console.log("La tua costituzione é: esile");
-        }
-        else if(polso>=15 && polso<16){ 
-            console.log("La tua costituzione é: Normale");
-        }
-        else if(polso>=16){ 
-            console.log("La tua costituzione é: Robusta");
-        }
-
-    }
-    else if(sesso.toLowerCase()== "uomo"){
-        if(polso<17){
-            console.log("La tua costituzione é: esile");
-        }
-        else if(polso>=17 && polso<18){ 
-            console.log("La tua costituzione é: Normale");
-        }
-        else if(polso>=18){ 
-            console.log("La tua costituzione é: Robusta");
-        }
-    }
-
-
-}
-else if(conferma.toLocaleLowerCase() == "no"){
-    console.log("Arrivederci");
-}
+calcoloBmi(bmi);
+calcoloPolso();

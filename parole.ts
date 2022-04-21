@@ -5,8 +5,12 @@
 // concatenazione di a con b
 // concatenazione di b con a
 
-const a = String(prompt("Inserisci prima parola:"));
-const b = String(prompt("Inserisci seconda parola:"));
+function conca():void{
+        const a = String(prompt("Inserisci prima parola:"));
+    const b = String(prompt("Inserisci seconda parola:"));
 
-console.log(a+b);
-console.log(b+a);
+    console.log(a+b);
+    console.log(b+a);
+}
+
+conca();

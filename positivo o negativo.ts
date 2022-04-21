@@ -16,7 +16,12 @@ else{
     console.log("Il numero e` positivo");
 }
 */
-switch(n<0){
-    case true: console.log("Il numero e` negativo");break;
-    case false: console.log("Il numero e` positivo");break;
+
+function pon(n:number):void{
+    switch(n<0){
+        case true: console.log("Il numero e` negativo");break;
+        case false: console.log("Il numero e` positivo");break;
+    }
 }
+
+pon(n);

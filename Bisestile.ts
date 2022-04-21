@@ -20,7 +20,13 @@ else{
     console.log("L'anno non e` bisestile"); 
 }
 */
-switch(n%400==0 || (n%4==0) && (n%100!=0)){
-    case true:console.log("L'anno e` bisestile");break;
-    case false:console.log("L'anno non e` bisestile");break;
+
+function calcoloAnno(n:number):void{
+    
+    switch(n%400==0 || (n%4==0) && (n%100!=0)){
+        case true:console.log("L'anno e` bisestile");break;
+        case false:console.log("L'anno non e` bisestile");break;
+    }
 }
+
+calcoloAnno(n);

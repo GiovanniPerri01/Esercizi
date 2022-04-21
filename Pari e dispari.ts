@@ -17,7 +17,11 @@ else{
 }
 */
 
-switch(n%2){
-    case 0: console.log("Il numero é pari"); break;
-    case 1: console.log("Il numero é dispari"); break;
+function pod(n:number):void{
+    switch(n%2){
+        case 0: console.log("Il numero é pari"); break;
+        case 1: console.log("Il numero é dispari"); break;
+    }
 }
+
+pod(n);

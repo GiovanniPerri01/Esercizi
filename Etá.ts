@@ -5,7 +5,10 @@ Output : "Hai 30 anni";
 Input : 2010
 Otuput: "Hai 12 anni";
 */
+function calcoloEta():void{
+    let n = Number(prompt("inserisci anno di nascita: "));
 
-let n = Number(prompt("inserisci anno di nascita: "));
+    console.log("Hai " + (2022-n) + " anni");
+}
 
-console.log("Hai " + (2022-n) + " anni");
+calcoloEta();

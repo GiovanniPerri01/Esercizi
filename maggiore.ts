@@ -27,16 +27,19 @@ else{
     }
 }
 */
-
-switch(n1>n2){
-    case true: switch(n1>n3){
-        case true: console.log("Il valore piu` grande e` :" + n1); break;
-        case false: console.log("Il valore piu` grande e` :" + n3); break;
+function maggiore():void{
+    switch(n1>n2){
+        case true: switch(n1>n3){
+            case true: console.log("Il valore piu` grande e` :" + n1); break;
+            case false: console.log("Il valore piu` grande e` :" + n3); break;
+        }
+        ;break
+        case false: switch(n2>n3){
+            case true: console.log("Il valore piu` grande e` :" + n2); break;
+            case false: console.log("Il valore piu` grande e` :" + n3); break;
+        }
+        ;break
     }
-    ;break
-    case false: switch(n2>n3){
-        case true: console.log("Il valore piu` grande e` :" + n2); break;
-        case false: console.log("Il valore piu` grande e` :" + n3); break;
-    }
-    ;break
 }
+
+maggiore();

@@ -7,7 +7,7 @@
 
 let list:number[] = [];
 let numero = Number(prompt("Inserisci numero(termina con -1)"));
-let c:number = 1;
+let c:number;
 let lastc:number=0;
 let maxc:number;
 
@@ -19,18 +19,19 @@ while (numero !=-1){
 maxc = list[0];
 
 for(let i:number = 0; i<list.length-1; i++){
+    c = 1;
 
     for(let j:number = i+1; j<list.length; j++){
 
         if(list[i]== list[j]){
             c++;
         }
-
-    }
+}
     if(c>lastc){
         maxc=list[i];
+        lastc=c;
     }
-    lastc=c;
 }
 
+console.log(list);
 console.log(maxc);

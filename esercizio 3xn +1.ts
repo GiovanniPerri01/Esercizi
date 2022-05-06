@@ -36,7 +36,6 @@ if(a > 0 && a < 10000000 && b > 0 && b < 10000000){
                 cont++;
             }
         }
-        console.log(cont);
         
         if(contV < cont){
 

@@ -1,0 +1,32 @@
+<form (submit)="calcolaRisultato()">
+  
+  <h3 class="ion-text-center">Esercizio 3*n+1</h3>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+
+      <ion-col> 
+        <ion-item>
+          <ion-label position="stacked">A</ion-label>
+          <ion-input type="number" id="a" name="a" [(ngModel)]="v1"></ion-input>
+        </ion-item>
+        <h5>Inserisci primo numero</h5>
+        <ion-item>
+          <ion-label position="stacked">B</ion-label>
+          <ion-input type="number" id="b" name="b" [(ngModel)]="v2"></ion-input>
+        </ion-item>
+        <h5>Inserisci secondo numero</h5>
+      </ion-col>
+
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h5 class="ion-text-center">Il risultato é: {{risultato}}</h5>
+
+  <div class="ion-text-center">
+    <ion-button type="submit">Calcola risultato</ion-button>
+  </div>
+
+</form>

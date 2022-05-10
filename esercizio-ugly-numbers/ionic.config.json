@@ -1,0 +1,7 @@
+{
+  "name": "Esercizio uglyNumbers",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

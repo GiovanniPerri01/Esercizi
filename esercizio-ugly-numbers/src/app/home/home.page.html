@@ -1,0 +1,26 @@
+<form (submit)="calcolaNumero()">
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      
+      <ion-col>
+        <ion-item>
+          <ion-label for="i" position="floating">Inserisci n(posizione del numero da trovare)</ion-label>
+          <ion-input class="ion-text-center" type="number" id="i" name="i" [(ngModel)]="n" ></ion-input>
+        </ion-item>
+      </ion-col>
+      
+      <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col></ion-col>
+      
+      <ion-col class="ion-text-center">
+        <ion-button type="submit">Trova numero in posizione {{n}}</ion-button>
+      </ion-col>
+      
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</form>

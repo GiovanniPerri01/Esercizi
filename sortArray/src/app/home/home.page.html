@@ -1,0 +1,49 @@
+<<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      ArraySortinator 3000 turbo gx trialband
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="True">
+  <form>
+    <ion-grid >
+
+      <ion-row>
+        <ion-col></ion-col>
+        
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">Inserisci un numero</ion-label>
+            <ion-input clearOnEdit="true" class="ion-text-center" type="number" name="numero" id="numero" [(ngModel)]="numero"></ion-input>
+          </ion-item>
+        </ion-col>
+        
+        <ion-col>
+          <ion-button (click)="insNumero()">Inserisci numero</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col></ion-col>
+        
+        <ion-col class="ion-text-center">
+          
+          <ion-button (click)="sort()">Sort Array</ion-button>
+          <ion-button (click)="clearList()">Pulisci Lista</ion-button>
+
+          <ion-row>
+            <h5>{{messaggio}}</h5>
+          </ion-row>
+
+        </ion-col>
+        
+        <ion-col></ion-col>
+      
+      </ion-row>
+
+    </ion-grid>
+  </form>
+
+</ion-content>

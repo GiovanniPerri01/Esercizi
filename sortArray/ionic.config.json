@@ -1,0 +1,7 @@
+{
+  "name": "sortArray",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

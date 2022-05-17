@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Esercizio n7b
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="True">
+  <form>
+    <ion-grid >
+
+      <ion-row>
+        <ion-col></ion-col>
+        
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">Inserisci x</ion-label>
+            <ion-input clearOnEdit="true" class="ion-text-center" type="number" name="x" id="x" [(ngModel)]="x"></ion-input>
+          </ion-item>
+          <br>
+
+          <ion-item>
+            <ion-label position="stacked">Inserisci n</ion-label>
+            <ion-input clearOnEdit="true" class="ion-text-center" type="number" name="n" id="n" [(ngModel)]="n"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col></ion-col>
+        
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">Inserisci numero</ion-label>
+            <ion-input clearOnEdit="true" class="ion-text-center" type="number" name="numero" id="numero" [(ngModel)]="numero"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>          
+          <ion-button (click)="insNum()">Inserisci numero</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col></ion-col>
+        
+        <ion-col class="ion-text-center">
+          
+          <ion-button (click)="calcola()">Calcola risultato</ion-button>
+          <ion-row>
+            <h5>{{str}}</h5>
+          </ion-row>
+
+        </ion-col>
+        
+        <ion-col></ion-col>
+      
+      </ion-row>
+
+    </ion-grid>
+  </form>
+
+</ion-content>

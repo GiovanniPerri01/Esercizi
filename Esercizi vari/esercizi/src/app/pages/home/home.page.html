@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Menu esercizi
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+
+      <ion-col class="ion-text-center">
+        <h5>Seleziona l'esercizio da visualizzare</h5>
+
+        <ion-item>
+          <ion-label>Scegli esercizio</ion-label>
+          <ion-select interface="popover" [(ngModel)]="indirizzo">
+            <ion-select-option>n7b</ion-select-option>
+            <ion-select-option>n10</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      
+
+      <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col></ion-col>
+
+      <ion-col class="ion-text-center">
+        <ion-button routerLink="/{{indirizzo}}">Vai all'esercizio {{indirizzo}}</ion-button>
+      </ion-col>
+
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

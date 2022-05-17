@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Esercizio n10
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="True">
+  <form>
+    <ion-grid >
+      <ion-row>
+        <ion-col></ion-col>
+        
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">Inserisci numero</ion-label>
+            <ion-input clearOnEdit="true" class="ion-text-center" type="number" name="numero" id="numero" [(ngModel)]="numero"></ion-input>
+          </ion-item>
+
+          <ion-row class="ion-text-center">
+            <ion-col>
+              <ion-button (click)="calcola()">Calcola risultato</ion-button>
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="ion-text-center">
+            <ion-col>
+              <h5>{{risultato}}</h5>
+            </ion-col>
+          </ion-row>
+
+        </ion-col>
+
+        <ion-col></ion-col>
+        </ion-row>
+    </ion-grid>
+  </form>
+
+</ion-content>

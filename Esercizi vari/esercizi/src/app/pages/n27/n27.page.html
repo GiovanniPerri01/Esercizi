@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>n27</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid >
+
+    <ion-row>
+      <ion-col></ion-col>
+      
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Inserisci n</ion-label>
+          <ion-input clearOnEdit="true" class="ion-text-center" type="number" name="n" id="n" [(ngModel)]="n"></ion-input>
+        </ion-item>
+      </ion-col>
+      
+      <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col></ion-col>
+      
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Inserisci numero</ion-label>
+          <ion-input clearOnEdit="true" class="ion-text-center" type="number" name="numero" id="numero" [(ngModel)]="numero"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col>          
+        <ion-button (click)="insNum()">Inserisci numero</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col></ion-col>
+      
+      <ion-col class="ion-text-center">
+        
+        <ion-button (click)="calcola()">Calcola risultato</ion-button>
+        <ion-button (click)="clearList()">Pulisci lista</ion-button>
+
+        <ion-row>
+          <ion-col class="ion-text-center">
+            <h5>{{str}}</h5>
+          </ion-col>
+        </ion-row>
+
+
+      </ion-col>
+      
+      <ion-col></ion-col>
+    
+    </ion-row>
+
+  </ion-grid>
+
+  <app-ritorna-home></app-ritorna-home>
+
+</ion-content>

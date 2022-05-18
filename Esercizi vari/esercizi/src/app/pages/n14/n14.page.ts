@@ -52,6 +52,7 @@ export class N14Page implements OnInit {
 
   clearList(){
     this.list = [];
+    this.str = "";
   }
 
 }

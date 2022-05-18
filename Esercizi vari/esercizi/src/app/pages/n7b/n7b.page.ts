@@ -36,4 +36,9 @@ export class N7bPage implements OnInit {
   insNum(){
     this.list.push(this.numero);
   }
+
+  clearList(){
+    this.list = [];
+    this.str = "";
+  }
 }

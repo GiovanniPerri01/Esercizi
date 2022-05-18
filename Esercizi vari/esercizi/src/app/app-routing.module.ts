@@ -27,6 +27,14 @@ const routes: Routes = [
     path: 'n27',
     loadChildren: () => import('./pages/n27/n27.module').then( m => m.N27PageModule)
   },
+  {
+    path: 'n32',
+    loadChildren: () => import('./pages/n32/n32.module').then( m => m.N32PageModule)
+  },
+  {
+    path: 'n36',
+    loadChildren: () => import('./pages/n36/n36.module').then( m => m.N36PageModule)
+  },
 ];
 
 @NgModule({

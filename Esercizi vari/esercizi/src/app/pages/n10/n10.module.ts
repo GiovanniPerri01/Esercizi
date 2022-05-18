@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { N10PageRoutingModule } from './n10-routing.module';
 
 import { N10Page } from './n10.page';
+import { RitornaHomeModule } from 'src/app/components/ritorna-home/ritorna-home.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    N10PageRoutingModule
+    N10PageRoutingModule,
+    RitornaHomeModule
   ],
   declarations: [N10Page]
 })

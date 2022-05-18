@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'n10',
     loadChildren: () => import('./pages/n10/n10.module').then( m => m.N10PageModule)
   },
+  {
+    path: 'n14',
+    loadChildren: () => import('./pages/n14/n14.module').then( m => m.N14PageModule)
+  },
 ];
 
 @NgModule({

@@ -4,9 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { N7bPageRoutingModule } from './n7b-routing.module';
+import { N14PageRoutingModule } from './n14-routing.module';
 
-import { N7bPage } from './n7b.page';
+import { N14Page } from './n14.page';
+import { RitornaHomeComponent } from 'src/app/components/ritorna-home/ritorna-home.component';
+import { AppModule } from 'src/app/app.module';
 import { RitornaHomeModule } from 'src/app/components/ritorna-home/ritorna-home.module';
 
 @NgModule({
@@ -14,9 +16,9 @@ import { RitornaHomeModule } from 'src/app/components/ritorna-home/ritorna-home.
     CommonModule,
     FormsModule,
     IonicModule,
-    N7bPageRoutingModule,
+    N14PageRoutingModule,
     RitornaHomeModule
   ],
-  declarations: [N7bPage]
+  declarations: [N14Page]
 })
-export class N7bPageModule {}
+export class N14PageModule {}

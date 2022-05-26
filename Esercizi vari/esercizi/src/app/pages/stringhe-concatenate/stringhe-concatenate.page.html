@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">stringhe concatenate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid >
+
+    <ion-row>
+      <ion-col></ion-col>
+      
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Inserisci stringa 1</ion-label>
+          <ion-input clearOnEdit="true" class="ion-text-center" type="text" name="str1" id="str1" [(ngModel)]="str1"></ion-input>
+        </ion-item>
+        <br>
+
+        <ion-item>
+          <ion-label position="stacked">Inserisci stringa 2</ion-label>
+          <ion-input clearOnEdit="true" class="ion-text-center" type="text" name="str2" id="str2" [(ngModel)]="str2"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col></ion-col>
+
+      <ion-col class="ion-text-center">          
+        <ion-button (click)="calcola()">Calcola</ion-button>
+
+        <ion-row class="center">
+          <ion-label>
+            {{str3}}
+          </ion-label>
+        </ion-row>
+      </ion-col>
+
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <app-ritorna-home></app-ritorna-home>
+
+</ion-content>

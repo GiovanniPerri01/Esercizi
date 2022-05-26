@@ -35,6 +35,18 @@ const routes: Routes = [
     path: 'n36',
     loadChildren: () => import('./pages/n36/n36.module').then( m => m.N36PageModule)
   },
+  {
+    path: 'palindroma',
+    loadChildren: () => import('./pages/palindroma/palindroma.module').then( m => m.PalindromaPageModule)
+  },
+  {
+    path: 'stringhe-concatenate',
+    loadChildren: () => import('./pages/stringhe-concatenate/stringhe-concatenate.module').then( m => m.StringheConcatenatePageModule)
+  },
+  {
+    path: 'stringa-composta',
+    loadChildren: () => import('./pages/stringa-composta/stringa-composta.module').then( m => m.StringaCompostaPageModule)
+  },
 ];
 
 @NgModule({

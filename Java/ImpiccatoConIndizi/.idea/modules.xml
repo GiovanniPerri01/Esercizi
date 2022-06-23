@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ImpiccatoAlternativo.iml" filepath="$PROJECT_DIR$/ImpiccatoAlternativo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ImpiccatoConIndizi.iml" filepath="$PROJECT_DIR$/ImpiccatoConIndizi.iml" />
     </modules>
   </component>
 </project>

@@ -16,8 +16,6 @@ public class Main {
         Veicoli.motocicli.add(new Motociclo("RS250R", "Honda", 2018, 7500, true, false));
         Veicoli.motocicli.add(new Motociclo("V7", "Guzzi", 2020, 10000, false, true));
 
-        Veicoli.vecchio();
-        Veicoli.nuovo();
-        Veicoli.media();
+        Veicoli.calcoli();
     }
 }

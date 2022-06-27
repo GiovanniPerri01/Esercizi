@@ -64,17 +64,31 @@ public class Veicoli {
     }
 
     public static void media(){
-        int somma = 0;
-        int lunghezza = automobili.size() + motocicli.size();
+        int sommaAuto = 0;
+        int sommaMoto = 0;
+        int sommaTotale = 0;
+        int lunghezzaAuto = automobili.size();
+        int lunghezzaMoto = motocicli.size();
+        int lunghezzaTotale = automobili.size() + motocicli.size();
 
         for(int i = 0; i < automobili.size(); i++){
-            somma += automobili.get(i).getPrezzo();
-        }
-        for(int i = 0; i < motocicli.size(); i++){
-            somma += motocicli.get(i).getPrezzo();
+            sommaAuto += automobili.get(i).getPrezzo();
         }
 
-        System.out.println("La media totale di tutti i veicoli e': " + somma/lunghezza);
+        for(int i = 0; i < motocicli.size(); i++){
+            sommaMoto += motocicli.get(i).getPrezzo();
+        }
+
+        sommaTotale = sommaAuto + sommaMoto;
+        System.out.println("La media totale di tutti i veicoli e': " + sommaTotale/lunghezzaTotale);
+        System.out.println("La media delle auto e': " + sommaAuto/lunghezzaAuto);
+        System.out.println("La media delle moto e': " + sommaMoto/lunghezzaMoto);
+
     }
 
+    public static void calcoli(){
+        vecchio();
+        nuovo();
+        media();
+    }
 }

@@ -15,7 +15,10 @@ public class App
         Gestione.motocicli.add(new Motociclo("Monster", "Ducati", 4000, 2011, false, false));
         Gestione.motocicli.add(new Motociclo("RS250R", "Honda", 7500, 2018, false, true));
         Gestione.motocicli.add(new Motociclo("V7", "Guzzi", 10000, 2020, true, false));
+        Gestione.motocicli.add(new Motociclo("Tuono V4X", "Aprilia", 15000, 2020, true, true));
 
+        RivalutazionePrezzi.rivalutaAuto();
+        RivalutazionePrezzi.rivalutaMoto();
         Gestione.calcoli();
     }
 }

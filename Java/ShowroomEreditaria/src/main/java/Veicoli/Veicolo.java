@@ -14,5 +14,4 @@ public class Veicolo {
     private String marca;
     private Integer prezzo;
     private Integer annoP;
-
 }

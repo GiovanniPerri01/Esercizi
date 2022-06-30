@@ -1,6 +1,8 @@
 package Veicoli;
 
 
+import Veicoli.Motocicli.Limitata;
+import Veicoli.Motocicli.Pista;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,10 +14,10 @@ import lombok.Setter;
 @AllArgsConstructor
 
 public class Motociclo extends Veicolo{
-    private Boolean limitata;
-    private Boolean daPista;
+    private Limitata limitata;
+    private Pista daPista;
 
-    public Motociclo(String nome, String marca, Integer prezzo, Integer annoP, Boolean limitata, Boolean daPista) {
+    public Motociclo(String nome, String marca, Integer prezzo, Integer annoP, Limitata limitata, Pista daPista) {
         super(nome, marca, prezzo, annoP);
         this.limitata = limitata;
         this.daPista = daPista;

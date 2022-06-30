@@ -17,18 +17,17 @@ public class RivalutazionePrezzi {
     public static void rivalutaMoto(){
         for(int i = 0 ; i < Gestione.motocicli.size(); i++){
             Motociclo moto = Gestione.motocicli.get(i);
-            if(moto.getDaPista()){
+            if(moto.getDaPista().getDaPista()){
                 int aumento = (moto.getPrezzo() * 15) / 100;
-                if(moto.getLimitata()){
+                if(moto.getLimitata().getLimitata()){
                     aumento = (aumento * 25) / 100;
                 }
                 moto.setPrezzo(moto.getPrezzo() + aumento);
             }
-            else if(moto.getLimitata()){
+            else if(moto.getLimitata().getLimitata()){
                 int aumento = (moto.getPrezzo() * 25) / 100;
                 moto.setPrezzo(moto.getPrezzo() + aumento);
             }
-            System.out.println(moto.getPrezzo());
         }
     }
 }

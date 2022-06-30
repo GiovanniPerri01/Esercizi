@@ -86,9 +86,29 @@ public class Gestione {
         System.out.println("La media totale di tutti i veicoli e': " + sommaTotale/lunghezzaTotale);
         System.out.println("La media delle auto e': " + sommaAuto/lunghezzaAuto);
         System.out.println("La media delle moto e': " + sommaMoto/lunghezzaMoto);
-
     }
 
+    public static void controlloMoto(){
+        for(int i = 0; i < motocicli.size(); i++){
+            Motociclo moto = motocicli.get(i);
+            String output = "La moto ";
+            if(moto.getDaPista().getDaPista()){
+                output += moto.getNome() + " ha il cambio " +
+                        moto.getDaPista().getCambio() +", le gomme " +
+                        moto.getDaPista().getTipoGomme() + " per " +
+                        moto.getDaPista().getStagioneGomme();
+                if(moto.getLimitata().getLimitata()){
+                    output += ", la sua edizione e' l'" + moto.getLimitata().getEdizione();
+                }
+                System.out.println(output);
+            }
+            else if(moto.getLimitata().getLimitata()){
+                output = "L'edizione della moto " + moto.getNome() + " e'" +
+                        " l'" + moto.getLimitata().getEdizione();
+                System.out.println(output);
+            }
+        }
+    }
     public static void calcoli(){
         vecchio();
         nuovo();

@@ -11,9 +11,15 @@ public class Autori {
     public void authorCreate(){}
 
     @DeleteMapping(value = HTTPUtilty.DELETE)
-    public void authorDelete(){}
+    public void authorDelete(@PathVariable Integer id){}
 
     @PutMapping(value = HTTPUtilty.UPDATE)
     public void authorUpdate(){}
+
+    @GetMapping(value = HTTPUtilty.GET)
+    public void authorGet(@PathVariable Integer id){}
+
+    @PostMapping(value = HTTPUtilty.SEARCH)
+    public void authorSearch(){}
 
 }

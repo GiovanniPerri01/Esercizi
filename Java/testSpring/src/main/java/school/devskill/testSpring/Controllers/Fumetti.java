@@ -11,9 +11,15 @@ public class Fumetti {
     public void comicCreate(){}
 
     @DeleteMapping(value = HTTPUtilty.DELETE)
-    public void comicDelete(){}
+    public void comicDelete(@PathVariable Integer id){}
 
     @PutMapping(value = HTTPUtilty.UPDATE)
     public void comicUpdate(){}
+
+    @GetMapping(value = HTTPUtilty.GET)
+    public void comicGet(@PathVariable Integer id){}
+
+    @PostMapping(value = HTTPUtilty.SEARCH)
+    public void comicSearch(){}
 
 }

@@ -10,7 +10,7 @@ public class Gestione {
     public static List<Motociclo> motocicli = new ArrayList<>();
     public static List<Automobile> automobili = new ArrayList<>();
 
-    public static void vecchio(){
+    public static String vecchio(){
         int old = automobili.get(0).getAnnoP();
         int posizione = 0;
         boolean v = false;
@@ -31,14 +31,14 @@ public class Gestione {
         }
 
         if(v){
-            System.out.println("Il veicolo piu vecchio e': " + motocicli.get(posizione).getMarca() + " " + motocicli.get(posizione).getNome());
+            return "Il veicolo piu vecchio e': " + motocicli.get(posizione).getMarca() + " " + motocicli.get(posizione).getNome();
         }
         else{
-            System.out.println("Il veicolo piu vecchio e': " + automobili.get(posizione).getMarca() + " " + automobili.get(posizione).getNome());
+            return "Il veicolo piu vecchio e': " + automobili.get(posizione).getMarca() + " " + automobili.get(posizione).getNome();
         }
     }
 
-    public static void nuovo(){
+    public static String nuovo(){
         int nuovo = automobili.get(0).getAnnoP();
         int posizione = 0;
         boolean v = false;
@@ -59,14 +59,14 @@ public class Gestione {
         }
 
         if(v){
-            System.out.println("Il veicolo piu nuovo e': " + motocicli.get(posizione).getMarca() + " " + motocicli.get(posizione).getNome());
+            return "Il veicolo piu nuovo e': " + motocicli.get(posizione).getMarca() + " " + motocicli.get(posizione).getNome();
         }
         else{
-            System.out.println("Il veicolo piu nuovo e': " + automobili.get(posizione).getMarca() + " " + automobili.get(posizione).getNome());
+            return "Il veicolo piu nuovo e': " + automobili.get(posizione).getMarca() + " " + automobili.get(posizione).getNome();
         }
     }
 
-    public static void media(){
+    public static List<String> media(){
         int sommaAuto = 0;
         int sommaMoto = 0;
         int sommaTotale = 0;
@@ -83,12 +83,17 @@ public class Gestione {
         }
 
         sommaTotale = sommaAuto + sommaMoto;
-        System.out.println("La media totale di tutti i veicoli e': " + sommaTotale/lunghezzaTotale);
-        System.out.println("La media delle auto e': " + sommaAuto/lunghezzaAuto);
-        System.out.println("La media delle moto e': " + sommaMoto/lunghezzaMoto);
+
+        List<String> lista = new ArrayList<>();
+        lista.add("La media totale di tutti i veicoli e': " + sommaTotale/lunghezzaTotale);
+        lista.add("La media delle auto e': " + sommaAuto/lunghezzaAuto);
+        lista.add("La media delle moto e': " + sommaMoto/lunghezzaMoto);
+
+        return lista;
     }
 
-    public static void controlloMoto(){
+    public static List<String> controlloMoto(){
+        List<String> lista = new ArrayList<>();
         for(int i = 0; i < motocicli.size(); i++){
             Motociclo moto = motocicli.get(i);
             String output = "La moto ";
@@ -100,18 +105,14 @@ public class Gestione {
                 if(moto.getLimitata().getLimitata()){
                     output += ", la sua edizione e' l'" + moto.getLimitata().getEdizione();
                 }
-                System.out.println(output);
+                lista.add(output);
             }
             else if(moto.getLimitata().getLimitata()){
                 output = "L'edizione della moto " + moto.getNome() + " e'" +
                         " l'" + moto.getLimitata().getEdizione();
-                System.out.println(output);
+                lista.add(output);
             }
         }
-    }
-    public static void calcoli(){
-        vecchio();
-        nuovo();
-        media();
+        return lista;
     }
 }

@@ -4,10 +4,15 @@ import Veicoli.Automobile;
 import Veicoli.Motocicli.Limitata;
 import Veicoli.Motocicli.Pista;
 import Veicoli.Motociclo;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
 public class App
 {
     public static void main(String[] args) {
+        SpringApplication.run(App.class,args);
+
         Gestione.automobili.add(new Automobile("A3", "Audi", 35000, 2012, 1000));
         Gestione.automobili.add(new Automobile("Stelvio", "Alfa Romeo", 50000, 2021, 980));
         Gestione.automobili.add(new Automobile("GLK", "Mercedes", 80000, 2022, 1200));
@@ -30,7 +35,5 @@ public class App
 
         RivalutazionePrezzi.rivalutaAuto();
         RivalutazionePrezzi.rivalutaMoto();
-        Gestione.calcoli();
-        Gestione.controlloMoto();
     }
 }

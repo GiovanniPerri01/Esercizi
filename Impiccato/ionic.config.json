@@ -1,0 +1,7 @@
+{
+  "name": "Impiccato",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

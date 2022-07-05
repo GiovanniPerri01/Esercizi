@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <div class="ion-text-center">
+    <ion-toolbar>
+      <h2>IMPICCATO</h2>
+    </ion-toolbar>
+  </div>
+
+  <div class="center">
+    <img src={{url}} width="700px" height="500px">
+    <h5>Tentativi rimasti: {{tentativi}}</h5>
+  </div>
+  <div class="center">
+    <h4>{{parolaNascosta}}</h4>
+  </div>
+  <div class="center">
+    <h4>{{parolaNascosta2}}</h4>
+  </div>
+  <br>
+  <div class="center">
+    <ion-grid>
+      <ion-row class="center">
+        <ion-item class="ion-text-center">
+          <ion-input placeholder="Inserisci lettera" clearOnEdit="true" [(ngModel)]="lettera"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row class="center">
+        <ion-col></ion-col>
+        <ion-button (click)="checkChar()">Controlla</ion-button>
+        <ion-col>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </div>
+</ion-content>

@@ -23,6 +23,7 @@ export class HomePage {
   tentativi:number = 5;
   perso:Boolean = false;
   lettereTrovate:number;
+  lettereUsate:String = "";
 
   controlloTentativi(){
     if(this.tentativi == 5){
@@ -63,6 +64,9 @@ export class HomePage {
       else if(this.lettera == ""){
         alert("Attenzione, non hai immesso nulla");
       }
+      if(this.lettereUsate.includes(this.lettera)){
+        alert("Hai gia' usato questa lettera!")
+      }
       else{
         for(let i:number = 0; i < this.parolaSplittata.length; i++){
           if(this.parolaSplittata[i].toLowerCase() == this.lettera.toLowerCase()){
@@ -76,7 +80,13 @@ export class HomePage {
         }
       }
     }
+    
+    if(!this.lettereUsate.includes(this.lettera)){
+      this.lettereUsate += this.lettera + ", ";
+    }
+    
     this.controlloTentativi();
+
     if(this.tentativi < 0){
       alert("Sei morto! La parola era: " + this.parola);
     }
@@ -84,6 +94,7 @@ export class HomePage {
     if(!this.parolaNascosta.includes("*")){
       alert("Hai vinto!");
     }
+
     
   }
 

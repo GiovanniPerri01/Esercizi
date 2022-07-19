@@ -1,19 +1,29 @@
 <ion-content [fullscreen]="true">
-  <div class="ion-text-center">
-    <ion-toolbar>
-      <h2>IMPICCATO</h2>
-    </ion-toolbar>
-  </div>
-
   <div class="center">
-    <img src={{url}} width="700px" height="500px">
-    <h5>Tentativi rimasti: {{tentativi}}</h5>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h5>IMPICCATO</h5>
+        </ion-col>
+
+        <ion-col>
+          <img src={{url}} height="500px" class="ion-align-self-end">
+        </ion-col>
+       
+        <ion-col>
+          <ion-row>
+            <h5>Tentativi rimasti: {{tentativi}}</h5>
+          </ion-row>
+          <ion-row>
+            <h5>Lettere gia' usate: {{lettereUsate}}</h5>
+          </ion-row>
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
   </div>
   <div class="center">
     <h4>{{parolaNascosta}}</h4>
-  </div>
-  <div class="center">
-    <h4>{{parolaNascosta2}}</h4>
   </div>
   <br>
   <div class="center">

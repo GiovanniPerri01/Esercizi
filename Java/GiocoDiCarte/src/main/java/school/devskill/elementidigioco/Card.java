@@ -5,10 +5,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
 @Setter
 @Getter
 @NoArgsConstructor
-public class Player {
-    private String name;
+@AllArgsConstructor
+public class Card {
+    private int atk;
+    private int def;
 }

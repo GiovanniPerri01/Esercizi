@@ -9,11 +9,6 @@ import school.devskill.service.implementation.BoardManager;
 public class GiocoDiCarteApplication {
 
 	public static void main(String[] args) {
-	//	SpringApplication.run(GiocoDiCarteApplication.class, args);
-		Player p1 = new Player("Mario");
-		Player p2 = new Player("Giovanni");
-		BoardManager board = new BoardManager(p1, p2);
-
-		System.out.println(board.daiCarta());
+		SpringApplication.run(GiocoDiCarteApplication.class, args);
 	}
 }

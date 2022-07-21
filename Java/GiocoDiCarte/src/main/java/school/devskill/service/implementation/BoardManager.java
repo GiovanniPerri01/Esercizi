@@ -195,7 +195,7 @@ public class BoardManager implements IBoardManager {
         this.statoPartita = p1.getName() + " ha " +
                 p1.getHP() + " HP, la sua mano é:\n"+ manoP1 + "\n" + p2.getName() + " ha " +
                 p2.getHP() + " HP, la sua mano é:\n" + manoP2;
-        return  "Tavolo:\n'" + strTavolo + "\n\n" + this.statoPartita;
+        return "Tavolo:\n" + strTavolo + "\n\n" + this.statoPartita;
     }
 
     @Override

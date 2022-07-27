@@ -13,7 +13,6 @@ export class HomePage {
 
   parola:String = "";
   parolaNascosta:String ="";
-  parolaNascosta2:String ="";
   immagine:number;
   url:String;
   lettera:string;

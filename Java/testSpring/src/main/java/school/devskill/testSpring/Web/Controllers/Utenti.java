@@ -1,16 +1,15 @@
-package school.devskill.testSpring.Controllers;
+package school.devskill.testSpring.Web.Controllers;
 
-import org.apache.catalina.User;
 import org.springframework.web.bind.annotation.*;
-import school.devskill.testSpring.Command.UserCommand;
-import school.devskill.testSpring.DTO.UserDTO;
+import school.devskill.testSpring.Web.Command.UserCommand;
+import school.devskill.testSpring.Web.DTO.UserDTO;
 import school.devskill.testSpring.Utility.HTTPUtilty;
 
 @RestController
 @RequestMapping("user")
 public class Utenti {
 
-    @GetMapping(value = HTTPUtilty.GET)
+    @GetMapping(value = "get")
     public UserDTO userGet(@PathVariable Integer id){
         UserDTO user = new UserDTO();
         user.setId(id);
@@ -36,7 +35,7 @@ public class Utenti {
     @PutMapping(value = HTTPUtilty.UPDATE)
     public void userUpdate(){}
 
-    @DeleteMapping(value = HTTPUtilty.DELETE)
+    @DeleteMapping(value = "delete")
     public void userDelete(@PathVariable Integer id){
     }
 

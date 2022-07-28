@@ -1,4 +1,4 @@
-package school.devskill.testSpring.DTO;
+package school.devskill.testSpring.Web.DTO;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;

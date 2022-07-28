@@ -1,11 +1,11 @@
-package school.devskill.testSpring.DTO;
+package school.devskill.testSpring.Web.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import school.devskill.testSpring.Command.AuthorCommand;
-import school.devskill.testSpring.Command.CategoryCommand;
+import school.devskill.testSpring.Web.Command.AuthorCommand;
+import school.devskill.testSpring.Web.Command.CategoryCommand;
 
 @Setter
 @Getter

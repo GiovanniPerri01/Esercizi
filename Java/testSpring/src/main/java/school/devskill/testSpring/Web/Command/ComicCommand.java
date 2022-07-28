@@ -1,4 +1,4 @@
-package school.devskill.testSpring.Command;
+package school.devskill.testSpring.Web.Command;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

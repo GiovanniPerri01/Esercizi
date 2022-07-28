@@ -1,15 +1,15 @@
-package school.devskill.testSpring.Controllers;
+package school.devskill.testSpring.Web.Controllers;
 
 import org.springframework.web.bind.annotation.*;
-import school.devskill.testSpring.Command.CategoryCommand;
-import school.devskill.testSpring.DTO.CategoryDTO;
+import school.devskill.testSpring.Web.Command.CategoryCommand;
+import school.devskill.testSpring.Web.DTO.CategoryDTO;
 import school.devskill.testSpring.Utility.HTTPUtilty;
 
 @RestController
 @RequestMapping("category")
 public class Categorie {
 
-    @GetMapping(value = HTTPUtilty.GET)
+    @GetMapping(value = "get")
     public CategoryDTO categoryGet(@PathVariable Integer id){
         CategoryDTO category = new CategoryDTO();
         category.setId(id);
@@ -30,7 +30,7 @@ public class Categorie {
     @PutMapping(value = HTTPUtilty.UPDATE)
     public void categoryUpdate(){}
 
-    @DeleteMapping(value = HTTPUtilty.DELETE)
+    @DeleteMapping(value = "delete")
     public void categoryDelete(@PathVariable Integer id){}
 
     @PostMapping(value = HTTPUtilty.SEARCH)

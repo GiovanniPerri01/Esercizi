@@ -1,4 +1,4 @@
-package school.devskill.testSpring.Command;
+package school.devskill.testSpring.Web.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,8 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CategoryCommand {
+public class CategoryDTO {
+    private Integer id;
     private String name;
     private String description;
 }

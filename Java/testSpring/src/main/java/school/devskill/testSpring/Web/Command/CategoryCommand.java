@@ -1,4 +1,4 @@
-package school.devskill.testSpring.Command;
+package school.devskill.testSpring.Web.Command;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthorCommand {
+public class CategoryCommand {
     private String name;
-    private String surname;
+    private String description;
 }

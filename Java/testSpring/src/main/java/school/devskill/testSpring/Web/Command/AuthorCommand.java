@@ -1,4 +1,4 @@
-package school.devskill.testSpring.DTO;
+package school.devskill.testSpring.Web.Command;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,8 +9,7 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthorDTO {
-    private Integer id;
+public class AuthorCommand {
     private String name;
     private String surname;
 }

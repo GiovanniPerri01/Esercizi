@@ -9,14 +9,14 @@ import school.devskill.testSpring.Web.DTO.UserDTO;
 
 @RestController
 @RequestMapping("login")
-public class Login {
+public class LoginController {
     @PostMapping("/login")
     public UserDTO login(@RequestBody LoginCommand utente){
         UserDTO user = new UserDTO();
         user.setId(null);
         user.setName(null);
         user.setSurname(null);
-        user.setEmail(utente.getEmail());
+        user.setUsername(utente.getEmail());
         return user;
     }
 }

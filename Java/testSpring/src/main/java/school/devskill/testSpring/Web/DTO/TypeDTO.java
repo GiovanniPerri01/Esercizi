@@ -9,7 +9,6 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CategoryDTO {
-    private String name;
-    private String description;
+public class TypeDTO {
+    private String value;
 }

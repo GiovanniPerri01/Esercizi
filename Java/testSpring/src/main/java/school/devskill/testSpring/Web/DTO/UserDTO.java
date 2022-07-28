@@ -14,7 +14,7 @@ public class UserDTO {
     private Integer id;
     private String name;
     private String surname;
-    private String email;
+    private String username;
     @JsonIgnore
     private String password;
 }

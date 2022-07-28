@@ -12,6 +12,6 @@ import lombok.Setter;
 public class UserCommand {
     private String name;
     private String surname;
-    private String email;
+    private String username;
     private String password;
 }

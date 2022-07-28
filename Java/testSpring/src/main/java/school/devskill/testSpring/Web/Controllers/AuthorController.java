@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import school.devskill.testSpring.Model.Author;
 import school.devskill.testSpring.Service.Classes.AuthorServiceImpl;
-import school.devskill.testSpring.Service.Interfaces.IAuthorService;
 import school.devskill.testSpring.Web.Command.AuthorCommand;
 import school.devskill.testSpring.Web.DTO.AuthorDTO;
 import school.devskill.testSpring.Utility.HTTPUtilty;
@@ -15,13 +14,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("author")
-public class Autori {
+public class AuthorController {
 
     private final ObjectMapper mapper;
     private AuthorServiceImpl authorServiceImpl;
 
     @Autowired
-    public Autori(ObjectMapper mapper, AuthorServiceImpl authorServiceImpl) {
+    public AuthorController(ObjectMapper mapper, AuthorServiceImpl authorServiceImpl) {
         this.mapper = mapper;
         this.authorServiceImpl = authorServiceImpl;
     }
@@ -56,8 +55,13 @@ public class Autori {
     }
 
     @DeleteMapping(value = HTTPUtilty.DELETE_BY+"Id/{id}")
-    public String authorDelete(@PathVariable Integer id){
+    public String authorDelById(@PathVariable Integer id){
         return authorServiceImpl.delById(id);
+    }
+
+    @DeleteMapping(value = HTTPUtilty.DELETE_ALL)
+    public String authorDelAll(){
+        return authorServiceImpl.delAllAuthors();
     }
 
 }

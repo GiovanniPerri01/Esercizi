@@ -1,5 +1,6 @@
 package school.devskill.testSpring.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Setter
 @Getter
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
     @Id
     @Column

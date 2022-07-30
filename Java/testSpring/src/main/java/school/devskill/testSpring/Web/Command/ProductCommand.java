@@ -9,11 +9,13 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ComicCommand {
+public class ProductCommand {
     private String name;
-    private String description;
+    private String title;
+    private Integer author;
+    private String category;
     private String type;
-    private AuthorCommand author;
-    private CategoryCommand category;
-    private String photo;
+    private String description;
+    private String size;
+    private byte[] image;
 }

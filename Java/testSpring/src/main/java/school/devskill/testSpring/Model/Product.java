@@ -32,7 +32,7 @@ public class Product {
     @Column(length = 15)
     private String size;
 
-    @Column(columnDefinition = "BLOB")
+    @Column(columnDefinition = "LONGBLOB")
     @Lob
     private byte[] image;
 
